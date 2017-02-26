@@ -181,8 +181,8 @@ void SimpleLinkSockEventHandler(SlSockEvent_t* event) {
 
 void task_socket() {
     //Start the wifi AP
-    char* psk = "st1ckm@n";
-    wifi_start("Stickman V2.0", psk, strlen(psk));
+    char* psk = "r@ndyh@ndy";
+    wifi_start("Randy MechHandy", psk, strlen(psk));
 
 	while(1) {
 		int listenSocket;

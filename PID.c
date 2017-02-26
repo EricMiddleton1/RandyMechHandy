@@ -13,13 +13,22 @@ float PID_init(struct PID *pid, float kp, float ki, float kd) {
     pid->kd = kd;
 
     pid->integral = 0.f;
-    pid->prevIn = 0.;
+    pid->prevErr = 0.f;
     pid->setPoint = 0.f;
-    pid->curPoint = 0.f;
 }
 
-float PID_update(struct PID *pid, float dt) {
-    float err = pid->setPoint - pid->curPoint;
+void PID_set(struct PID *pid, float setPoint) {
+    pid->setPoint = setPoint;
+}
 
-    //float out = pid->kp*err + pid->ki*integral + pid->kd*
+float PID_update(struct PID *pid, float curPoint, float dt) {
+    float err = pid->setPoint - curPoint;
+    float deriv = (err - pid->prevErr) / dt;
+    pid->integral += err * dt;
+
+    float out = pid->kp*err + pid->ki*pid->integral + pid->kd*deriv;
+
+    pid->prevErr = err;
+
+    return out;
 }

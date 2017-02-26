@@ -16,7 +16,6 @@
 #include "prcm.h"
 #include "utils.h"
 #include "gpio.h"
-#include "Console.h"
 
 // free_rtos/ti-rtos includes
 #include "osi.h"
@@ -26,18 +25,13 @@
 
 #include "Communicator.h"
 #include "Timer.h"
-#ifndef NOTERM
-#include "uart_if.h"
-#endif
+#include "task_wifi.h"
+#include "Analog.h"
+#include "ControlLoop.h"
 
 #define OSI_STACK_SIZE          2048
 
-#define DEFAULT_BAUD			115200
-
 #include "pin_mux_config.h"
-
-//Custom tasks
-#include "task_wifi.h"
 
 //*****************************************************************************
 //
@@ -96,11 +90,14 @@ int main(void)
     wifi_init();
 
     Communicator_init();
-
     Communicator_registerHandler(SET_MOTOR, __commSetMotor);
     //Communicator_registerHandler(SET_MOTORS_FREQ, __commSetMotorsFreq);
 
     Timer_init();
+
+    Analog_init();
+
+    ControlLoop_init();
 
     int retval;
 

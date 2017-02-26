@@ -8,15 +8,15 @@ GEN_OPTS__FLAG := --cmd_file="/home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200
 GEN_CMDS__FLAG := -l"/home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/ti_rtos/ti_rtos_config/ccs/Default/configPkg/linker.cmd"
 
 ORDERED_OBJS += \
+"./Analog.obj" \
 "./Communicator.obj" \
-"./Console.obj" \
+"./ControlLoop.obj" \
 "./PID.obj" \
 "./Timer.obj" \
 "./main.obj" \
 "./network_common.obj" \
 "./rom_pin_mux_config.obj" \
 "./task_wifi.obj" \
-"./uart_if.obj" \
 "../cc3200v1p32.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -166,8 +166,8 @@ Randy_MechHandy.bin: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Communicator.obj" "Console.obj" "PID.obj" "Timer.obj" "main.obj" "network_common.obj" "rom_pin_mux_config.obj" "task_wifi.obj" "uart_if.obj" 
-	-$(RM) "Communicator.d" "Console.d" "PID.d" "Timer.d" "main.d" "network_common.d" "rom_pin_mux_config.d" "task_wifi.d" "uart_if.d" 
+	-$(RM) "Analog.obj" "Communicator.obj" "ControlLoop.obj" "PID.obj" "Timer.obj" "main.obj" "network_common.obj" "rom_pin_mux_config.obj" "task_wifi.obj" 
+	-$(RM) "Analog.d" "Communicator.d" "ControlLoop.d" "PID.d" "Timer.d" "main.d" "network_common.d" "rom_pin_mux_config.d" "task_wifi.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

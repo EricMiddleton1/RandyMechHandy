@@ -27,15 +27,15 @@ main.obj: /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/driverlib/inter
 main.obj: /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/driverlib/prcm.h
 main.obj: /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/driverlib/utils.h
 main.obj: /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/driverlib/gpio.h
-main.obj: ../Console.h
-main.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include/stdint.h
 main.obj: /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/example/common/common.h
 main.obj: ../Communicator.h
+main.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include/stdint.h
 main.obj: ../Timer.h
-main.obj: /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/example/common/uart_if.h
-main.obj: ../pin_mux_config.h
 main.obj: ../task_wifi.h
 main.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include/stdlib.h
+main.obj: ../Analog.h
+main.obj: ../ControlLoop.h
+main.obj: ../pin_mux_config.h
 
 ../main.c: 
 /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/simplelink/include/simplelink.h: 
@@ -64,12 +64,12 @@ main.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include/stdlib.h
 /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/driverlib/prcm.h: 
 /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/driverlib/utils.h: 
 /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/driverlib/gpio.h: 
-../Console.h: 
-/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include/stdint.h: 
 /home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/example/common/common.h: 
 ../Communicator.h: 
+/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include/stdint.h: 
 ../Timer.h: 
-/home/eric/ti/tirex-content/CC3200SDK_1.1.0/cc3200-sdk/example/common/uart_if.h: 
-../pin_mux_config.h: 
 ../task_wifi.h: 
 /opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include/stdlib.h: 
+../Analog.h: 
+../ControlLoop.h: 
+../pin_mux_config.h: 
